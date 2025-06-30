@@ -235,7 +235,7 @@ def read_whatsapp_messages(phone_number: str, limit: int = 10) -> bool:
 
 def main():
     """Función principal para leer mensajes del número específico."""
-    phone_number = "51959812636"
+    phone_number = "51999999999"
     
     print("=== Cliente Simple WhatsApp MCP - Lector de Mensajes (Mejorado) ===")
     
