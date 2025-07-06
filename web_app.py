@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import uvicorn
-from simple_client_requests2 import send_whatsapp_message
+from client_request2 import send_whatsapp_message
 
 app = FastAPI(title="WhatsApp Web Sender")
 
