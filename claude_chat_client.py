@@ -230,6 +230,29 @@ class WhatsAppMCPClient:
             "chat_jid": chat_jid
         })
     
+    def check_new_messages(self, mark_as_seen: bool = True) -> List[Dict[str, Any]]:
+        """
+        Check for new WhatsApp messages since the last check. This enables message notifications.
+        
+        Args:
+            mark_as_seen: Whether to mark the returned messages as seen (default: True)
+            
+        Returns:
+            List of new messages that arrived since the last check
+        """
+        return self._call_tool("check_new_messages", {
+            "mark_as_seen": mark_as_seen
+        })
+    
+    def mark_messages_as_seen(self) -> Dict[str, Any]:
+        """
+        Mark all current messages as seen, so they won't appear in future new message checks.
+        
+        Returns:
+            Dict with success status and message
+        """
+        return self._call_tool("mark_messages_as_seen", {})
+    
     def get_server_info(self) -> Dict[str, Any]:
         """
         Get server information and status
